@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import "./globals.css";
 
 import { DM_Serif_Display, DM_Sans } from "next/font/google";
+import SiteHeader from "@/components/SiteHeader";
 
 const dmSans = DM_Sans({
   subsets: ["latin"],
@@ -30,9 +31,10 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${dmSans.variable} ${dmSerif.variable} font-sans text-black bg-slate-50`}
+        className={`${dmSans.variable} ${dmSerif.variable} font-sans text-black h-screen flex flex-col bg-gray-50`}
       >
-        {children}
+        <SiteHeader />
+        <main className="grow flex flex-col">{children}</main>
       </body>
     </html>
   );
