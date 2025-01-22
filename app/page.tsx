@@ -4,15 +4,11 @@ import { FaYoutube } from "react-icons/fa";
 
 import "./cornerbox.css";
 
-// const Headline = () => (
-
-// );
-
 export default function Home() {
   return (
-    <div>
+    <div className="flex flex-col">
       <header className="p-4 md:p-8 md:flex">
-        <div className="font-serif text-4xl text-center pb-4 md:text-left md:pb-0 md:grow">
+        <div className="font-sans text-4xl text-center pb-4 md:text-left md:pb-0 md:grow">
           <div className="flex flex-col justify-center">Jhonathon Weiland</div>
         </div>
         <div className="flex justify-center space-x-12 md:space-x-4">
@@ -32,7 +28,14 @@ export default function Home() {
       </header>
       <main className="px-8 flex flex-col md:flex-row md:justify-center md:space-x-4 ">
         <Image
-          className="mx-auto mb-4 md:hidden lg:block lg:mx-0 lg:mb-0"
+          className="hidden xl:block"
+          src="/images/headshot.png"
+          alt="headshot"
+          width={500}
+          height={500}
+        />
+        <Image
+          className="mx-auto mb-4 md:hidden lg:block lg:mx-0 lg:mb-0 xl:hidden"
           src="/images/headshot.png"
           alt="headshot"
           width={400}
@@ -47,7 +50,7 @@ export default function Home() {
         />
 
         <div className="md:flex md:flex-col md:justify-center md:w-[372px] lg:grow">
-          <div className="cornerbox font-serif text-lg text-justify leading-relaxed p-4 md:text-xl md:leading-relaxed lg:text-3xl lg:leading-relaxed">
+          <div className="cornerbox font-sans text-lg text-justify leading-relaxed p-4 md:text-xl md:leading-relaxed lg:text-3xl lg:leading-relaxed">
             I'm a <strong>School Health and Wellness Education: K-12</strong>{" "}
             major at <i>Slippery Rock University of Pennsylvania</i> and a{" "}
             <strong>certified personal trainer</strong> based out of New Castle,
@@ -56,6 +59,10 @@ export default function Home() {
           </div>
         </div>
       </main>
+      <div id="about" className="my-10 text-4xl font-serif text-center">
+        About
+      </div>
+
       <footer></footer>
     </div>
   );
