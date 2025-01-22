@@ -10,9 +10,9 @@ import { useRef } from "react";
 
 const ShortBio = () => (
   <div className="font-sans text-justify text-xl leading-loose lg:text-2xl lg:leading-loose xl:text-3xl xl:leading-loose">
-    I'm a <i>School Health and Wellness Education: K-12</i> major at{" "}
+    I&apos;m a <i>School Health and Wellness Education: K-12</i> major at{" "}
     <strong>Slippery Rock University of Pennsylvania</strong> and a{" "}
-    <i>certified personal trainer</i> based out of New Castle, PA. I'll be
+    <i>certified personal trainer</i> based out of New Castle, PA. I&apos;ll be
     graduating in Spring 2025 as a <strong>Bachelor of Education</strong>.
   </div>
 );
@@ -110,6 +110,7 @@ export default function Home() {
         className="h-screen bg-gray-100 shadow p-4 snap-always snap-center"
       >
         <div className="text-center text-4xl font-serif">About Me</div>
+        <div className="p-4">{longBio}</div>
       </section>
       <footer></footer>
     </div>
