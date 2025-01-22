@@ -34,7 +34,7 @@ export default function RootLayout({
         className={`${dmSans.variable} ${dmSerif.variable} font-sans text-black h-screen flex flex-col bg-gray-50`}
       >
         <SiteHeader />
-        <main className="grow flex flex-col">{children}</main>
+        <main className="grow">{children}</main>
       </body>
     </html>
   );
