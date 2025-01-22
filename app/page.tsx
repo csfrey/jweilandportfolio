@@ -1,12 +1,6 @@
 "use client";
 
-import Image from "next/image";
-import { FaLinkedin } from "react-icons/fa";
-import { FaYoutube } from "react-icons/fa";
-import { FaArrowDown } from "react-icons/fa";
-
 import "./cornerbox.css";
-import { useRef } from "react";
 import { Button } from "@/components/ui/button";
 
 // const longBio =
