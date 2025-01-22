@@ -18,8 +18,8 @@ const ShortBio = () => (
   </div>
 );
 
-const longBio =
-  "I was born and raised in Southeast Texas,  but spent the majority of my childhood moving around many of the southern states. In school, I participated in an athletics program and powerlifting competitions which introduced me to my passion for health and wellness. At 19, I joined the U.S. Air Force as a Supply troop and was stationed overseas for 6 years. I had the pleasure of living and working in the U.K., South Korea, and Japan. I was able to gain invaluable workplace experience,  plentiful volunteer opportunities, the training and skillset to become a strong leader, and an innumerable amount of unique cultural experiences that living internationally can offer. Today, I spend my time as a  certified personal trainer working with clients of all age groups, and as a full-time university student working towards a Bachelors in Education that specializes in school health and wellness for all grades, as well as a minor in the Japanese language and history.";
+// const longBio =
+//   "I was born and raised in Southeast Texas,  but spent the majority of my childhood moving around many of the southern states. In school, I participated in an athletics program and powerlifting competitions which introduced me to my passion for health and wellness. At 19, I joined the U.S. Air Force as a Supply troop and was stationed overseas for 6 years. I had the pleasure of living and working in the U.K., South Korea, and Japan. I was able to gain invaluable workplace experience,  plentiful volunteer opportunities, the training and skillset to become a strong leader, and an innumerable amount of unique cultural experiences that living internationally can offer. Today, I spend my time as a  certified personal trainer working with clients of all age groups, and as a full-time university student working towards a Bachelors in Education that specializes in school health and wellness for all grades, as well as a minor in the Japanese language and history.";
 
 const Cert = ({
   title,
