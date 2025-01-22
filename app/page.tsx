@@ -7,6 +7,7 @@ import { FaArrowDown } from "react-icons/fa";
 
 import "./cornerbox.css";
 import { useRef } from "react";
+import { Button } from "@/components/ui/button";
 
 const ShortBio = () => (
   <div className="font-sans text-justify text-xl leading-loose lg:text-2xl lg:leading-loose xl:text-3xl xl:leading-loose">
@@ -19,6 +20,40 @@ const ShortBio = () => (
 
 const longBio =
   "I was born and raised in Southeast Texas,  but spent the majority of my childhood moving around many of the southern states. In school, I participated in an athletics program and powerlifting competitions which introduced me to my passion for health and wellness. At 19, I joined the U.S. Air Force as a Supply troop and was stationed overseas for 6 years. I had the pleasure of living and working in the U.K., South Korea, and Japan. I was able to gain invaluable workplace experience,  plentiful volunteer opportunities, the training and skillset to become a strong leader, and an innumerable amount of unique cultural experiences that living internationally can offer. Today, I spend my time as a  certified personal trainer working with clients of all age groups, and as a full-time university student working towards a Bachelors in Education that specializes in school health and wellness for all grades, as well as a minor in the Japanese language and history.";
+
+const Cert = ({
+  title,
+  org,
+  year,
+  img,
+}: {
+  title: string;
+  org: string;
+  year: string;
+  img: string;
+}) => (
+  <div className="w-[200px] md:w-[360px]">
+    <div className="flex justify-center mb-4">
+      <Image
+        className="md:hidden"
+        src={img}
+        alt={title}
+        width={150}
+        height={150}
+      />
+      <Image
+        className="hidden md:block"
+        src={img}
+        alt={title}
+        width={220}
+        height={220}
+      />
+    </div>
+    <div className="font-bold text-xl text-center">{title}</div>
+    <div className="font-thin text-center">{org}</div>
+    <div className="text-center">{year}</div>
+  </div>
+);
 
 export default function Home() {
   const certsRef = useRef<HTMLElement | null>(null);
@@ -109,10 +144,45 @@ export default function Home() {
         ref={certsRef}
         className="h-screen bg-gray-100 shadow p-4 snap-always snap-center"
       >
-        <div className="text-center text-4xl font-serif">About Me</div>
-        <div className="p-4">{longBio}</div>
+        <div className="text-center text-4xl font-serif mb-8">
+          Certifications
+        </div>
+        <div className="">
+          <div className="flex justify-center mb-4">
+            <Cert
+              title="Associate of Arts"
+              org="University of Maryland Global Campus"
+              year="2020"
+              img="/images/associatedegree.png"
+            />
+            <Cert
+              title="Certified Personal Trainer"
+              org="National Personal Training Institute of Southern California, Inc."
+              year="2022"
+              img="/images/cpt.png"
+            />
+          </div>
+          <div className="flex justify-center">
+            <Cert
+              title="Red Cross EMR"
+              org="American Red Cross"
+              year="2023"
+              img="/images/red-cross-emr.png"
+            />
+            <Cert
+              title="Title IX"
+              org="NFHS"
+              year="2022"
+              img="/images/title-ix.png"
+            />
+          </div>
+          <div className="flex justify-center mt-8">
+            <Button className="">See More</Button>
+          </div>
+        </div>
       </section>
-      <footer></footer>
+
+      <section className="h-screen snap-always snap-center"></section>
     </div>
   );
 }
