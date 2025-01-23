@@ -31,10 +31,14 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${dmSans.variable} ${dmSerif.variable} font-sans text-black h-screen flex flex-col bg-gray-50`}
+        className={`${dmSans.variable} ${dmSerif.variable} font-sans text-black h-screen bg-gray-5 overflow-y-hidden`}
       >
-        <SiteHeader />
-        <main className="grow">{children}</main>
+        <header className="sticky top-0 z-50 shadow h-[6%]">
+          <SiteHeader />
+        </header>
+        <div className="h-[94%] overflow-y-scroll snap-y snap-mandatory">
+          {children}
+        </div>
       </body>
     </html>
   );
