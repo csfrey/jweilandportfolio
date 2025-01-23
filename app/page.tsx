@@ -1,18 +1,20 @@
 "use client";
 
-import MobileHero from "@/components/MobileHero";
-import MobileBlurb from "@/components/MobileBlurb";
-// import { FaArrowDown } from "react-icons/fa";
-
 import "./cornerbox.css";
 
+import MobileHero from "@/components/MobileHero";
+import MobileBlurb from "@/components/MobileBlurb";
+
+import { Button } from "@/components/ui/button";
+import { FaArrowRight } from "react-icons/fa";
+
 const longBio =
-  "I was born and raised in Southeast Texas,  but spent the majority of my childhood moving around many of the southern states. In school, I participated in an athletics program and powerlifting competitions which introduced me to my passion for health and wellness. At 19, I joined the U.S. Air Force as a Supply troop and was stationed overseas for 6 years. I had the pleasure of living and working in the U.K., South Korea, and Japan. I was able to gain invaluable workplace experience,  plentiful volunteer opportunities, the training and skillset to become a strong leader, and an innumerable amount of unique cultural experiences that living internationally can offer. Today, I spend my time as a  certified personal trainer working with clients of all age groups, and as a full-time university student working towards a Bachelors in Education that specializes in school health and wellness for all grades, as well as a minor in the Japanese language and history.";
+  "I grew up in Southeast Texas but spent much of my childhood moving across the southern states. My passion for health and wellness began with athletics and powerlifting in school. At 19, I joined the U.S. Air Force, spending six years overseas in the U.K., South Korea, and Japan, where I gained leadership skills, cultural experiences, and workplace training. Now, I’m a certified personal trainer working with clients of all ages and a full-time university student pursuing a Bachelor’s in Education focused on school health and wellness, with a minor in Japanese language and history.";
 
 export default function Home() {
   return (
     <>
-      <section className="h-full flex flex-col snap-center snap-always">
+      <section className="h-full flex flex-col snap-start snap-always">
         <article className="relative">
           <MobileHero />
         </article>
@@ -20,20 +22,40 @@ export default function Home() {
         <article className="">
           <MobileBlurb />
         </article>
-
-        {/* <article className="grow flex flex-col justify-center">
-          <div className="flex justify-center">
-            <FaArrowDown className="text-5xl" />
-          </div>
-        </article> */}
       </section>
 
-      <section className="h-full flex flex-col snap-center snap-always">
-        <article>
-          <img src="/images/headshot.png" className="h-64 mx-auto mt-4" />
+      <section className="h-full flex flex-col snap-start snap-always">
+        <article className="bg-violet-300 p-2">
+          <img
+            src="/images/headshot.png"
+            className="h-40 float-left mr-2 mt-2"
+          />
+          <div className="text-xs leading-relaxed text-gray-50">{longBio}</div>
         </article>
 
-        <article className="text-xs text-justify p-4">{longBio}</article>
+        <article>
+          <div className="flex justify-center mt-8">
+            <Button className="bg-violet-300 hover:bg-violet-400">
+              Read about my teaching philosophy
+              <FaArrowRight />
+            </Button>
+          </div>
+        </article>
+      </section>
+
+      {/* <section className="h-full flex flex-col snap-start snap-always"></section> */}
+
+      <section className="h-full flex flex-col snap-start snap-always">
+        <article className="text-center text-4xl mt-24">Contact Me</article>
+        <article className="text-center mt-4">
+          414 Norwood Ave
+          <br />
+          New Castle, PA 16105
+          <br />
+          409-289-3254
+          <br />
+          jhonathon.weiland@gmail.com
+        </article>
       </section>
     </>
   );
