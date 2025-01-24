@@ -2,7 +2,7 @@ import { IoIosMenu } from "react-icons/io";
 
 const SiteHeader = () => {
   return (
-    <div className="p-2 flex justify-between bg-gray-50">
+    <div className="p-2 flex justify-between bg-violet-100">
       <div className="flex flex-col justify-center">
         <h1 className="font text-3xl drop-shadow-md">Jhonathon Weiland</h1>
       </div>

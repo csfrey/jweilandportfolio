@@ -31,14 +31,15 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${dmSans.variable} ${dmSerif.variable} font-sans text-black h-screen bg-gray-5 overflow-y-hidden`}
+        className={`${dmSans.variable} ${dmSerif.variable} font-sans text-black h-screen bg-violet-100 overflow-y-hidden flex flex-col`}
       >
         <header className="sticky top-0 z-50 shadow h-[6%]">
           <SiteHeader />
         </header>
-        <div className="h-[94%] overflow-y-scroll snap-y snap-mandatory">
+        <div className="grow overflow-y-scroll snap-y snap-mandatory">
           {children}
         </div>
+        {/* <footer className="sticky bottom-0">I'm a footer</footer> */}
       </body>
     </html>
   );
