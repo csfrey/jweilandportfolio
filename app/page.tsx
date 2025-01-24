@@ -33,7 +33,7 @@ const LinkButton = ({
 export default function Home() {
   return (
     <>
-      <section className="h-full flex flex-col snap-start snap-always">
+      <section className="h-full overflow-x-hidden flex flex-col snap-start snap-always">
         <article className="relative">
           <motion.div
             initial={{ opacity: 0, x: -100 }}
