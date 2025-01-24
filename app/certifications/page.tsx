@@ -33,7 +33,7 @@ export default function Certifications() {
 
       <section className="my-4">
         {certs.map((c) => (
-          <div>
+          <div key={c[0] + c[1]}>
             <div className="flex mx-4 space-x-4">
               <div className="w-2/3">
                 <div className="font-bold text-xl">{c[0]}</div>
